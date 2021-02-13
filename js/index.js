@@ -79,3 +79,11 @@ navLinks.forEach((e, i) => {
 // SET H1 TEXT CONTENT
 let hOne = document.getElementsByTagName('h1').item(0);
 hOne.innerHTML = 'DOM<br> Is<br> Awesome';
+
+// ADD BUTTON TEXT BELOW H1
+let startButton = document.querySelector('.cta-text > button');
+startButton.textContent = 'Get Started';
+
+// UPDATE CTA IMG SRC
+let ctaImg = document.getElementById('cta-img');
+ctaImg.src = 'img/header-img.png';
