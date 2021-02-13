@@ -44,7 +44,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // CONSOLE.LOG ALIAS
 let log = console.log;
 
-// ADDING NAV TEXT CONTENT
+// ADDING NAV TEXT CONTENT AND MAKING GREEN
 let navLinks = document.querySelectorAll('nav > a');
 function navLinkText(linkItem, linkNum) {
   switch (linkNum) {
@@ -74,7 +74,19 @@ function navLinkText(linkItem, linkNum) {
 
 navLinks.forEach((e, i) => {
   navLinkText(e, i);
+  e.style.color = 'green';
 });
+
+let newATagOne = document.createElement('a');
+let newATagTwo = document.createElement('a');
+let aTagOneNode = document.createTextNode('new el 1')
+let aTagTwoNode = document.createTextNode('new el 2');
+newATagOne.appendChild(aTagOneNode);
+newATagTwo.appendChild(aTagTwoNode);
+log(newATagOne, newATagTwo);
+let navNav = document.querySelector('nav');
+navNav.appendChild(newATagOne);
+navNav.prepend(newATagTwo);
 
 // SET H1 TEXT CONTENT
 let hOne = document.getElementsByTagName('h1').item(0);
