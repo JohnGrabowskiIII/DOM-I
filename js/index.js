@@ -40,3 +40,35 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// ADDING NAV TEXT CONTENT
+let navLinks = document.querySelectorAll('nav > a');
+function navLinkText(linkItem, linkNum) {
+  switch (linkNum) {
+    case 0:
+      linkItem.textContent = 'Services';
+      break;
+    case 1:
+      linkItem.textContent = 'Product';
+      break;
+    case 2:
+      linkItem.textContent = 'Vision';
+      break;
+    case 3:
+      linkItem.textContent = 'Features';
+      break;
+    case 4:
+      linkItem.textContent = 'About';
+      break;
+    case 5:
+      linkItem.textContent = 'Contact';
+      break;
+    default:
+      console.log('error, defaulting');
+      break;
+  }
+}
+
+navLinks.forEach((e, i) => {
+  navLinkText(e, i);
+});
