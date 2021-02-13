@@ -41,6 +41,9 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// CONSOLE.LOG ALIAS
+let log = console.log;
+
 // ADDING NAV TEXT CONTENT
 let navLinks = document.querySelectorAll('nav > a');
 function navLinkText(linkItem, linkNum) {
@@ -72,3 +75,7 @@ function navLinkText(linkItem, linkNum) {
 navLinks.forEach((e, i) => {
   navLinkText(e, i);
 });
+
+// SET H1 TEXT CONTENT
+let hOne = document.getElementsByTagName('h1').item(0);
+hOne.innerHTML = 'DOM<br> Is<br> Awesome';
