@@ -87,3 +87,90 @@ startButton.textContent = 'Get Started';
 // UPDATE CTA IMG SRC
 let ctaImg = document.getElementById('cta-img');
 ctaImg.src = 'img/header-img.png';
+
+// ADDING H4 TEXT CONTENT
+let hFour = document.querySelectorAll('h4');
+function hFourText(tag, pos) {
+  switch (pos) {
+    case 0:
+      tag.textContent = 'Features';
+      break;
+    case 1:
+      tag.textContent = 'About';
+      break;
+    case 2:
+      tag.textContent = 'Services';
+      break;
+    case 3:
+      tag.textContent = 'Product';
+      break;
+    case 4:
+      tag.textContent = 'Vision';
+      break;
+    case 5:
+      tag.textContent = 'Contact';
+      break;
+    default:
+      log('error, defaulting');
+      break;
+  }
+}
+
+hFour.forEach((e, i) => {
+  hFourText(e, i);
+});
+
+// SETTING TEXT-CONTENT <P> TEXT CONTENT
+let textContP = document.querySelectorAll('div.text-content > p');
+function contPText(tag, pos) {
+  switch (pos) {
+    case 0:
+      tag.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+      break;
+    case 1:
+      tag.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+      break;
+    case 2:
+      tag.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+      break;
+    case 3:
+      tag.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+      break;
+    case 4:
+      tag.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+      break;
+    default:
+      log('error, defaulting');
+      break;
+  }
+}
+
+textContP.forEach((e, i) => contPText(e, i));
+
+// ADDING CENTER IMG
+let centerImg = document.querySelector('#middle-img');
+centerImg.src = 'img/mid-page-accent.jpg';
+
+// ADDING CONTACT INFO
+let contactP = document.querySelectorAll('.contact > p');
+function contactPtext(tag, pos) {
+  switch (pos) {
+    case 0:
+      tag.innerHTML = '123 Way 456 Street<br>Somewhere, USA';
+      break;
+    case 1:
+      tag.textContent = '1 (888) 888-8888';
+      break;
+    case 2:
+      tag.textContent = 'sales@greatidea.io';
+      break;
+    default:
+      log('error, defaulting');
+  }
+}
+
+contactP.forEach((e, i) => contactPtext(e, i));
+
+// ADDING FOOTER TEXT
+let footerP = document.querySelector('footer > p');
+footerP.textContent = 'Copyright Great Idea! 2018';
